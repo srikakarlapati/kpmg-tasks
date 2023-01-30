@@ -27,21 +27,21 @@ resource "azurerm_virtual_network" "my_vnet" {
 }
 
 module "tier1" {
-  source = "./3-Tier-Application/Tier1"
+  source = "./Tier1"
   resource_group_name = azurerm_resource_group.my_rg.name
   location = azurerm_resource_group.my_rg.location
   
 }
   
 module "tier2" {
-  source = "./3-Tier-Application/Tier2"
+  source = "./Tier2"
   resource_group_name = azurerm_resource_group.my_rg.name
   location = azurerm_resource_group.my_rg.location
   
 }
 
 module "tier3" {
-  source = "./3-Tier-Application/Tier3"
+  source = "./Tier3"
   resource_group_name = azurerm_resource_group.my_rg.name
   location = azurerm_resource_group.my_rg.location
   
